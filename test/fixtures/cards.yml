@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  suit: MyString
+  type: 
+  sub_type: MyString
+
+two:
+  suit: MyString
+  type: 
+  sub_type: MyString
