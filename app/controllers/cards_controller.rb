@@ -5,8 +5,8 @@ class CardsController < ApplicationController
     render json: @cards
   end
 
-  def match(id1, id2)
-    @result = Card.match_cards(id1, id2)
+  def match
+    @result = Card.match_cards(params[:id1], params[:id2])
     render json: @result
   end
 
