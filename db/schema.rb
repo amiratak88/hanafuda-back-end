@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2018_09_11_152827) do
 
   create_table "cards", force: :cascade do |t|
     t.string "suit"
-    t.string "type"
-    t.string "sub_type"
+    t.string "nature"
+    t.string "sub_nature"
     t.string "img_src"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
