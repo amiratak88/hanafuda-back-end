@@ -17,7 +17,7 @@ class Card < ApplicationRecord
  def self.match_cards( id1, id2)
    card1 = Card.find_by(id: id1)
    card2 = Card.find_by(id: id2)
-   if card1.suit == card2.suit || card1.nature == card2.nature
+   if card1.suit == card2.suit || (card1.nature == card2.nature && card1.nature != nil)
      return {result: true}
    else
      return {result: false}
