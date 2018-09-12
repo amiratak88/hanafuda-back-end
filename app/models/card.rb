@@ -1,14 +1,17 @@
 class Card < ApplicationRecord
 
- def shuffle_cards
+ def self.shuffle_cards
    shuffled = Card.all.shuffle
    return shuffled
  end
 
- def deal_cards
-   hand = shuffled.slice(1..8)
-   table = shuffled.slice(1..8)
+ def self.deal_cards
+   shuffled = self.shuffle_cards
+   hand = shuffled.slice!(0,8)
+   table = shuffled.slice!(0,8)
    deck = shuffled
+   dealt = {hand: hand, table: table, deck: deck}
+   return dealt
  end
 
 
