@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get "/cards/deal", to: "cards#deal"
   post "/cards/match", to: "cards#match"
-  post "/collection/score", to: "collection#score"
+  get "/collection/score", to: "collection#score"
   resources :hands
   resources :collections
   resources :game_players

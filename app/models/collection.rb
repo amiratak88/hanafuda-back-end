@@ -2,11 +2,32 @@ class Collection < ApplicationRecord
 
   def  self.scoring(collection)
      #map the array of id's from the front end
-     collection.map do |ids|
-       ids
+     c_arr = collection.map do |id|
      #turn into an araay of objects
+     Card.find(id)
+   end
      #pass those objects into my scoring
-
+     if is_goko?(c_arr)
+      return {yaku: "Goko", points: 15}
+     elsif is_shiko?(c_arr)
+      return {yaku: "Shiko", points: 10}
+    elsif is_ame_shiko?(c_arr)
+      return {yaku: "Ame Shiko", points: 8}
+    elsif is_sanko?(c_arr)
+      return {yaku: "Sanko", points: 6}
+    elsif is_aotan?(c_arr)
+      return {yaku: "Aotan", points: 6}
+    elsif is_akatan?(c_arr)
+      return {yaku: "Akatan", points: 6}
+    elsif is_ino_shika_cho?(c_arr)
+      return {yaku: "Ino Shika Cho", points: 5}
+    elsif is_tane?(c_arr)
+      return {yaku: "Tane", points: 1}
+    elsif is_tanzaku?(c_arr)
+      return {yaku: "tanzaku", points: 1}
+    elsif is_kasu(c_arr)
+      return {yaku: "kasu", points: 1}
+    end
   end
 
   def is_goko?(c_arr)
