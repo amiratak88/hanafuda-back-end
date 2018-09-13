@@ -1,3 +1,3 @@
 class CardSerializer < ActiveModel::Serializer
-  attributes :id, :suit, :type, :sub_type
+  attributes :id, :suit, :nature, :sub_nature
 end

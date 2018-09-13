@@ -1,5 +1,10 @@
 class CardsController < ApplicationController
 
+  def index
+    @cards = Card.all
+    render json: @cards 
+  end
+
   def deal
     @cards = Card.deal_cards
     render json: @cards
