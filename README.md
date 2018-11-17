@@ -7,9 +7,10 @@ To begin you'll want to clone down both this Backend repository and the Frontend
 
 # Installing
 1. Open up your text editor's terminal run 'bundle install' our gem-file is up to date so you shouldn't need to install any new gems
-2. Run 'rails s' to get the server started
-3. A localhost tab should open in your browser explore it to see the json data from our database
-4. With the backend up and running you'll be able to log into the application once you install the front end.
+2. First run 'rails db:create', then 'rails db:migrate', then 'rails db:seed'
+3. Run 'rails s' to get the server started
+4. A localhost tab should open in your browser explore it to see the json data from our database
+5. With the backend up and running you'll be able to log into the application once you install the front end.
 
 
 # Built with
