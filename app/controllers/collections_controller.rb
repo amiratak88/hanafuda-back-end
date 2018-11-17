@@ -1,9 +1,11 @@
 class CollectionsController < ApplicationController
 
-  def score
-    @score = Collection.scoring
+  def create
+    @score = Collection.scoring(params[:results])
     render json: @score
   end
+
+  
 
 
 
